@@ -1,4 +1,4 @@
-document.getElementById("search").addEventListener("click", () => {
+document.getElementById("search").addEventListener("click", () => { // обработка событий при поиске
     const city = document.getElementById("search_weather").value.trim();
     if (city.length === 0) return alert("Введіть назву міста!");
 
@@ -7,7 +7,7 @@ document.getElementById("search").addEventListener("click", () => {
     window.location.href = "../weather/index.html";
 });
 
-window.addEventListener("load", () => {
+window.addEventListener("load", () => { // обработка событий при переходе на страницу
     const body = document.body;
     if (sessionStorage.getItem("transition") === "toSearch") {
         body.classList.add("slide-in-left");
